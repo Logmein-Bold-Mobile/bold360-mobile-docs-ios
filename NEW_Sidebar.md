@@ -35,12 +35,13 @@ Quick Start
         > User Tracking
         > Alternative Readout
         > Entities & Personal Info Provider
-        > Welcome Message
         > Forms    
         > Error Handling
 > Advanced Topics
     > History
     > Messeges Injection
+        > Welcome message
+        > FAQs message
     > Continuity
     > Restore
     > Autocomplete
