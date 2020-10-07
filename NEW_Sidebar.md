@@ -24,24 +24,20 @@ Quick Start
             > Caruosel
             > Feedback
         > Dark Mode
-        > Bot Chat
-            > Feedback
-        > Live Chat & Messaging 
-            > Chat Bar
-            > Queue Bar
-            > Agent Typing Indication
-            > File Upload
+        > Chat Bar
+        > Queue Bar
+        > Agent Typing Indication
+        > File Upload
     > Tracking Events and States
         > Chat Lifecycle
         > Chat Availability
         > Events and Notifications
-        > Bot
-            > User Tracking
-            > Alternative Readout
-            > Entities & Personal Info Provider
-            > Welcome Message
-        > Live
-            > Forms    
+        > User Tracking
+        > Alternative Readout
+        > Entities & Personal Info Provider
+        > Welcome Message
+        > Forms    
+        > Error Handling
 > Advanced Topics
     > History
     > Messeges Injection
@@ -57,7 +53,6 @@ Quick Start
         > Timed Feedback
         > Instant Feedback
     > Messaging Chat
-Error Handling
 Release Notes
 FAQs
     > TLS
