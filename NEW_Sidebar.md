@@ -15,6 +15,7 @@ Quick Start
         > User input field
             > voice to voice
             > send button
+            > File Upload
         > Date and time
         > System message
         > Incoming & Outgoing message
@@ -27,7 +28,6 @@ Quick Start
         > Chat Bar
         > Queue Bar
         > Agent Typing Indication
-        > File Upload
     > Tracking Events and States
         > Chat Lifecycle
         > Chat Availability
