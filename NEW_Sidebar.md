@@ -33,8 +33,6 @@ Quick Start
         > Chat Availability
         > Events and Notifications
         > User Tracking
-        > Alternative Readout
-        > Entities & Personal Info Provider
         > Forms    
         > Error Handling
 > Advanced Topics
@@ -48,11 +46,13 @@ Quick Start
         > In chat
         > Standalone component
     > Voice
+        > Alternative Readout
     > File Upload
     > Handover
     > Feedback
         > Timed Feedback
         > Instant Feedback
+    > Entities & Personal Info
     > Messaging Chat
 Release Notes
 FAQs
