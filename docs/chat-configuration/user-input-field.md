@@ -27,29 +27,43 @@ The behavior and functionality of the input field is defined by the active chat 
 
 ## Available features
 - Typing and sending messages 
-- [Autocomplete](/docs/advanced-topics/autocomplete/in-chat)
-- [Voice recording and readout control](/docs/advanced-topics/voice)
-- [File upload](/docs/advanced-topics/file-upload) on live chats
-
-### Configure features
-Some of the available features, can be configured by the hosting App. Using `ConversationSettings` object, that can be provided on ChatController creation, you can configure the following:
-
-- [`voiceSettings(VoiceSettings)`](./docs/chat-configuration/chat-settings#voice-control)
-
-- `enableAutocompleteSupport(Boolean)`
+- [Autocomplete](~/docs/advanced-topics/autocomplete/in-chat)
+- [Voice recording and readout control](~/docs/advanced-topics/voice)
+- [File upload](~/docs/advanced-topics/file-upload) on live chats
 
 ---
+## UI customization
+- ### Configuration   
+  The SDK provides a configurable _user input field_ implementation.
+  The default configuration can be changed via `ChatController.viewConfiguration.searchViewConfig` 
+  
+  ```swift
+  let searchViewConfig = chatController.viewConfiguration.searchViewConfig
+  searchViewConfig.backgroundColor = ...
+  searchViewConfig.textColor = ...
+  searchViewConfig.customFont = ...
+  searchViewConfig.sendIcon = ...
+  searchViewConfig.uploadIcon = ...
+  // Border Configuration
+  searchViewConfig.border.color = ...
+  searchViewConfig.border.width = ...
+  searchViewConfig.border.cornerRadius = ...
+  // Voice Support Features
+  searchViewConfig.voiceEnabled = // defines whether or not to enable recording
+  searchViewConfig.speechOnIcon = ...
+  searchViewConfig.speechOffIcon = ...
+  searchViewConfig.readoutIcon = ...
+  //  Specifies the BCP-47 language tag representing the language for voice recognition.
+  /// Examples: en-US (U.S. English), fr-CA (French Canadian)
+  searchViewConfig.languageCode = "en-US" 
+  ```
 
-## send  button
-...
-
-### Send UI override
-In order to override the send view set `ChatUIProvider.chatInputUIProvider.sendCmpUIProvider.overrideFactory` with your view factory.
-> Custom implementation must implement `InputControlersHandler`
-
+  |![]({{'/assets/images/searchview.png' | relative_url}}){: .image-70}|![]({{'/assets/images/placeholder.png' | relative_url}}){: .image-70}|![]({{'/assets/images/autocomplete.png' | relative_url}}){: .image-70}
+  |---|---|---|
+  |![]({{'/assets/images/fileupload.png' | relative_url}}){: .image-70}|![]({{'/assets/images/recording.png' | relative_url}}){: .image-70}|![]({{'/assets/images/readout.png' | relative_url}}){: .image-70}
+{: .mb-8}
 
 ---
-
 ## Hint configuration
 
 - Hint configuration for AI chats is done on the [bold360ai console]({{'/assets/images/ai-hint-config.png' | relative_url}}).
@@ -57,55 +71,27 @@ In order to override the send view set `ChatUIProvider.chatInputUIProvider.sendC
 
 - Hint configuration for Live chats is done on the [bold admin console]({{'/assets/images/live-hint-config.png' | relative_url}}). 
 
-- Override hint text string resource `R.string.type_message_here`.   
+- Hint configurations should be set by ChatController.ChatConfiguration.SearchViewConfiguration.PlaceholderConfiguration
   This resource will be used, if none of the above was provided, to the current active chat.
 
----
-
-## UI customization
-The user input field can be customized by:
-
-- ### Configuration   
-  The SDK provides a configurable _user input field_ implementation.
-  The default configuration can be changed via `ChatUIProvider.chatInputUIProvider.uiConfig` and `ChatUIProvider.chatInputUIProvider.SendCmpUIProvider.uiConfig` <sub>(from 4.1.0)</sub>
-  
-  ```kotlin
-  val customProvider = ChatUIProvider(context).apply{
-      chatInputUIProvider.uiConfig.apply{
-        uploadImage = ...
-        belowPopupBackground = ... // autocomplete suggestions open downward image
-        abovePopupBackground = ... // autocomplete suggestions open upward image
-        noPopupBackground = ... // input field background when there are no autocomplete suggestions 
-        suggestionUIConfig = ... // defines config for the autocomplete suggestions rows 
-        inputStyleConfig = ... // the style of the input field text
-        ...
-      }
-
-      chatInputUIProvider.SendCmpUIProvider.uiConfig.apply{
-          speecherUIConfig.apply{
-            speakerImage = ... // speaker icon, presented while response is being read to the user
-            micImage = ... // recording voice icon
-          }
-          
-          sendImage = ... // message send icon
-      }
-  }
-
-  val chatController = ChatController.Builder(context)
-    ...
-    .chatUIProvider(customProvider)
-    .build(...)
+### Setting The PlaceholderConfiguration
+  ```swift
+  let placeholderConfiguration = PlaceholderConfiguration()
+  placeholderConfiguration.readoutext = "Reading out.."
+  placeholderConfiguration.recordText = "Recording now.."
+  placeholderConfiguration.text = "Write here.."
+  placeholderConfiguration.backgroundColor = UIColor.blue
+  placeholderConfiguration.textColor = UIColor.red
+  let customFont:CustomFont = CustomFont()
+  customFont.font = UIFont.italicSystemFont(ofSize: 30)
+  placeholderConfiguration.customFont = customFont
+  searchViewConfig.placeholderConfiguration = placeholderConfiguration
   ```
+---
+## Known Issues
+1. The ability to change the text inside the input field exists but does nothing:
+```swift
+chatController.viewConfiguration.searchViewConfig.text = "Does nothing"
+```
 
-  |![]({{'/assets/images/input_field_1.png' | relative_url}}){: .image-70}|![]({{'/assets/images/input_field_2.png' | relative_url}}){: .image-70}|![]({{'/assets/images/input_field_2.png' | relative_url}}){: .image-70}
-  |---|---|---|
-  |![]({{'/assets/images/input_field_3.png' | relative_url}}){: .image-70}|![]({{'/assets/images/input_field_4.png' | relative_url}}){: .image-70}|![]({{'/assets/images/input_field_5.png' | relative_url}}){: .image-70}
-{: .mb-8}
-
-
-- ### Override
-  In case a custom view is needed, instead of provided SDKs implementation, set `ChatUIProvider.chatInputUIProvider.overrideFactory` with your view factory.
-
-  > Custom implementation must implement `ChatInputViewProvider`
-  
   
