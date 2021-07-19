@@ -116,15 +116,6 @@ The behavior and functionality of the input field is defined by the active chat 
 | <img src="../../../../assets/images/record_before.png"  alt="1" width = 200px height = 350px>    | <img src="../../../../assets/images/record_after.png"  alt="1" width = 200px height = 350px>    |
 | <img src="../../../../assets/images/readout_before.png"  alt="1" width = 200px height = 350px>   | <img src="../../../../assets/images/readout_after.png"  alt="1" width = 200px height = 350px>   |
 
----
-
-## Known Issues
-
-### 1. The ability to change the text inside the input field exists but does nothing:
-
-``` swift
-chatController.viewConfiguration.searchViewConfig.text = "Does nothing"
-```
 
   
 
