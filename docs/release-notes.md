@@ -14,6 +14,34 @@ toc_float: true
 {: .det}
 <details open markdown="block">
 
+<summary> Version 3.13.0 </summary>
+
+# Version 3.12.3
+Release date: September 12, 2021
+{: .overview}
+
+  - Supporting RTL.
+  - Context attachment on every request.
+  
+### Fixes
+
+- Read more fix.
+- Fixing issue when the element is not found in the ChatRecorder.
+- Minor bug fixes.
+
+
+---
+
+To get latest version run:
+
+```ruby
+pod update 
+```
+</details>
+
+{: .det}
+<details close markdown="block">
+
 <summary> Version 3.12.3 </summary>
 
 # Version 3.12.3
