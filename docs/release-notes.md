@@ -20,16 +20,16 @@ toc_float: true
 Release date: September 12, 2021
 {: .overview}
 
-- Supporting RTL.
 - Context attachment on every request.
-- Upload icon configurable.
   
 ### Fixes
 
 - Read more fix.
 - Fixing issue when the element is not found in the ChatRecorder.
 - Support extra data while starting live chat.
-- Fix defualt read more title size.
+- Increasing the default title size for the read more articles.
+- Upload icon configurable.
+- Fix placeholder hint for the input field was not displayed after the message was auto-corrected.
 - Minor bug fixes.
 
 ---
