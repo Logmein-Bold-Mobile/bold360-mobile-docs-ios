@@ -16,19 +16,21 @@ toc_float: true
 
 <summary> Version 3.13.0 </summary>
 
-# Version 3.12.3
+# Version 3.3.0
 Release date: September 12, 2021
 {: .overview}
 
-  - Supporting RTL.
-  - Context attachment on every request.
+- Supporting RTL.
+- Context attachment on every request.
+- Upload icon configurable.
   
 ### Fixes
 
 - Read more fix.
 - Fixing issue when the element is not found in the ChatRecorder.
+- Support extra data while starting live chat.
+- Fix defualt read more title size.
 - Minor bug fixes.
-
 
 ---
 
