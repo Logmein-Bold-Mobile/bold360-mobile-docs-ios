@@ -15,5 +15,6 @@ Please make sure your Podfile is set with the right iOS version.
 ```swift
 platform :ios, "10.0" // must be 10 and above
 ```
-For Xcode13 compiling iOS sample click [here](https://github.com/bold360ai/bold360-mobile-samples-ios/tree/master/m1Sample).
+
+M1 compatible [sample](https://github.com/bold360ai/bold360-mobile-samples-ios/tree/master/m1Sample).
 
