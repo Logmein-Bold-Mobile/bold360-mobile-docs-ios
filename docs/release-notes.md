@@ -12,7 +12,32 @@ toc_float: true
 ---
 
 {: .det}
-<details open markdown="block">
+<details close markdown="block">
+
+<summary> Version 3.14.0 </summary>
+
+# Version 3.14.0
+Release date: October 14, 2021
+{: .overview}
+
+- Configurable custom fonts and text color on live forms.
+  
+### Fixes
+
+- Supporting the passing of AI channeling events to the reports.
+- Supporting channel ticket. 
+  
+---
+
+To get latest version run:
+
+```ruby
+pod update 
+```
+</details>
+
+{: .det}
+<details close markdown="block">
 
 <summary> Version 3.13.0 </summary>
 
