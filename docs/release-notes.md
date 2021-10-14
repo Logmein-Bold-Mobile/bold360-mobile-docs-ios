@@ -12,7 +12,7 @@ toc_float: true
 ---
 
 {: .det}
-<details open markdown="block">
+<details close markdown="block">
 
 <summary> Version 3.14.0 </summary>
 
@@ -20,12 +20,14 @@ toc_float: true
 Release date: October 14, 2021
 {: .overview}
 
+### Features
+
 - Configurable custom fonts and text color on live forms.
-  
+- Ticket typed channel with Linked article url.
+
 ### Fixes
 
-- Supporting the passing of AI channeling events to the reports.
-- Supporting channel ticket. 
+- Bot channels reports weren't delivered. 
   
 ---
 
