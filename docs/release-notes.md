@@ -22,12 +22,12 @@ Release date: October 14, 2021
 
 ### Features
 
-- Configurable custom fonts and text color on live forms.
+- Text color and font can be configured for live forms.
 - Ticket typed channel with Linked article url.
 
 ### Fixes
 
-- Bot channels reports weren't delivered. 
+- Reports for bot channels were not delivered. 
   
 ---
 
