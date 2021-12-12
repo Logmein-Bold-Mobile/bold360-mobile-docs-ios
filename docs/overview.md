@@ -17,17 +17,5 @@ permalink: /docs/overview
 
 ---
 
-## About
-**Bold mobile SDK for iOS** is a native iOS SDK, intended to be used by Apps developed for iOS devices usage.   
-Native SDK ensures usability by native applications and benefits from the operating system software features. 
-
-## Features
-Create and integrate AI and live chats to run under your App.
-Customize your chat look to meet your need.
-
-## Intended Audience
-This guide assumes that you have the necessary iOS development skills to build and compile advanced applications using Xcode.  
-
-> *If you're a Bold customer, please contact your Bold Customer Success Manager to help facilitate the use of this component.* 
-{: .mt-10} 
-
+## New Documentation Website
+Our site has moved to a new address: [https://genesys.github.io/bold360-mobile-docs-ios/docs/overview](https://genesys.github.io/bold360-mobile-docs-ios/docs/overview)
